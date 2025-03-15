@@ -5,40 +5,187 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <style>
+        /* Global Styles */
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            box-sizing: border-box;
         }
+        h1, h2, h3 {
+            margin: 0;
+            padding: 10px;
+        }
+        
+        /* Navigation Bar */
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        /* Header */
         header {
             background-color: #333;
             color: white;
-            padding: 20px;
-            font-size: 24px;
+            padding: 40px 0;
+            font-size: 36px;
         }
+
+        /* Container for Content */
         .container {
             margin: 20px;
             padding: 20px;
             background: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
         }
-        button {
-            padding: 10px 20px;
+
+        .container h2 {
+            font-size: 30px;
+        }
+
+        /* About Section */
+        #about {
+            background-color: #e2e2e2;
+            padding: 40px;
+        }
+
+        /* Projects Section */
+        #projects {
+            background-color: #ffffff;
+            padding: 40px;
+        }
+
+        .project-item {
+            margin: 20px;
+            padding: 20px;
+            background: #f0f0f0;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-item h3 {
+            color: #333;
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: #333;
+            color: white;
+            padding: 40px;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        form button {
+            padding: 12px 20px;
             background-color: #007BFF;
             color: white;
             border: none;
             cursor: pointer;
             font-size: 16px;
+            border-radius: 4px;
         }
-        button:hover {
+
+        form button:hover {
             background-color: #0056b3;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            nav a {
+                display: block;
+                margin: 5px 0;
+            }
         }
     </style>
 </head>
 <body>
-    <header>My Portfolio</header>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        My Portfolio
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about" class="container">
+        <h2>About Me</h2>
+        <p>Hello! I am a web developer with a passion for creating modern and interactive websites. I specialize in front-end development, focusing on user experience and clean design. I'm constantly learning and improving my skills.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="container">
+        <h2>My Projects</h2>
+
+        <div class="project-item">
+            <h3>Project 1: Portfolio Website</h3>
+            <p>This is the website you're currently on. I created it to showcase my work and skills as a web developer. It’s built with HTML, CSS, and JavaScript.</p>
+        </div>
+
+        <div class="project-item">
+            <h3>Project 2: Todo List App</h3>
+            <p>A simple to-do list web application. Built with JavaScript, it allows users to add, edit, and delete tasks.</p>
+        </div>
+
+        <div class="project-item">
+            <h3>Project 3: E-Commerce Website</h3>
+            <p>An e-commerce site built with React. Features include product listings, shopping cart, and user authentication.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container">
+        <h2>Contact Me</h2>
+        <p>If you'd like to get in touch with me, feel free to send a message using the form below!</p>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <!-- Script for Message Display -->
     <script>
         function showMessage() {
             alert('Thank you for visiting my portfolio!');
